@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/1182/contrib/simon/vim/generate
+END
+kheader.txt
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/1182/contrib/simon/vim/generate/kheader.txt
+END
+kgenerate.q
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/1182/contrib/simon/vim/generate/kgenerate.q
+END
+kfooter.txt
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/1182/contrib/simon/vim/generate/kfooter.txt
+END
+qheader.txt
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/1182/contrib/simon/vim/generate/qheader.txt
+END
+qgenerate.q
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/1182/contrib/simon/vim/generate/qgenerate.q
+END
+nested.vim
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/1182/contrib/simon/vim/generate/nested.vim
+END
+qfooter.txt
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/1182/contrib/simon/vim/generate/qfooter.txt
+END
