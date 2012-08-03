@@ -1,5 +1,3 @@
-export ARCHPREFERNCE=x86_64,i386
-
 export HOME="/Users/yikelu"
 
 export EC2_HOME=$HOME/.ec2
@@ -8,19 +6,21 @@ export EC2_CERT=$EC2_HOME/cert-FT46IN4H6Q77KH6IWHJ2N4ZHYZ5X4ATF.pem
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 
 ## I am cleaning up my path
-BASE_PATH=/usr/bin:/usr/sbin:/bin:/sbin
-BASE_PATH=/usr/local/bin:/usr/local/sbin:$BASE_PATH
+BASE_PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
 BASE_PATH=/opt/x11/bin:/usr/X11/bin:$BASE_PATH
 
-PERSONAL=/Library/Frameworks/Python.framework/Versions/2.7/bin
-PERSONAL=$PERSONAL:/usr/texbin
-PERSONAL=$PERSONAL:$HOME/.local/bin
-PERSONAL=$PERSONAL:$HOME/gtk/inst/bin
-PERSONAL=$HOME/Library/Haskell/bin:$PERSONAL
-PERSONAL=/usr/local/bin/godi_bin:$PERSONAL
-PERSONAL=$PERSONAL:$EC2_HOME/bin
+MAIN_PATH=/Library/Frameworks/Python.framework/Versions/2.7/bin
+MAIN_PATH=$MAIN_PATH:/usr/texbin
+MAIN_PATH=$MAIN_PATH:$HOME/.local/bin
+MAIN_PATH=$MAIN_PATH:$HOME/gtk/inst/bin
+MAIN_PATH=$HOME/Library/Haskell/bin:$MAIN_PATH
+MAIN_PATH=/usr/local/bin/godi_bin:$MAIN_PATH
+MAIN_PATH=$MAIN_PATH:$EC2_HOME/bin
 
-export PATH=$BASE_PATH:$PERSONAL
+UTILS_PATH=$HOME/bin
+UTILS_PATH=$UTILS_PATH:$HOME/dev/R_core/bin
+
+export PATH=$UTILS_PATH:$MAIN_PATH:$BASE_PATH
 
 export MANPATH=/usr/local/Cellar/godi/man:$MANPATH
 
@@ -44,8 +44,8 @@ export LESS=' -R '
 
 alias d="cd .."
 alias dd="cd ../.."
-alias vb="vi ~/.bash_profile"
-alias eb="ec ~/.bash_profile"
+alias vb="vi ~/.bash_common.sh"
+alias eb="ec ~/.bash_common.sh"
 alias sb="source ~/.bash_profile"
 alias ve="vi ~/.emacs.d/init.el"
 alias ee="ec ~/.emacs.d/init.el"
