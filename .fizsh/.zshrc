@@ -44,7 +44,7 @@
 
 # run this crap first, otherwise the prompt setting from the opening line clobbers the zsh one
 # yike hacks - for my custom aliases and paths
-source $_fizsh_F_DOT_DIR/.bash_settings.sh
+source $HOME/.bash_common.sh
 alias sz="source ~/.fizsh/.zshrc"
 alias vz="vi ~/.fizsh/.zshrc"
 alias ez="emacsclient -t ~/.fizsh/.zshrc"
