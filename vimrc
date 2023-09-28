@@ -53,3 +53,4 @@ au BufNewFile,BufRead *.py
 "  execfile(activate_this, dict(__file__=activate_this))
 "EOF
 
+set bs=indent,eol,start
