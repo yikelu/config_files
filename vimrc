@@ -51,20 +51,20 @@ let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 "python with virtualenv support
-py << EOF
-import os
-import sys
-if 'VIRTUAL_ENV' in os.environ:
-  project_base_dir = os.environ['VIRTUAL_ENV']
-  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-  execfile(activate_this, dict(__file__=activate_this))
-EOF
+"py << EOF
+"import os
+"import sys
+"if 'VIRTUAL_ENV' in os.environ:
+"  project_base_dir = os.environ['VIRTUAL_ENV']
+"  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+"  execfile(activate_this, dict(__file__=activate_this))
+"EOF
 
 Plugin 'vim-syntastic/syntastic'
-Also add PEP 8 checking with this nifty little plugin:
+" Also add PEP 8 checking with this nifty little plugin:
 
 Plugin 'nvie/vim-flake8'
-Finally, make your code look pretty:
+" Finally, make your code look pretty:
 
 let python_highlight_all=1
 syntax on
@@ -74,3 +74,5 @@ Plugin 'kien/ctrlp.vim'
 set nu
 
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+Plugin 'tomtom/tcomment_vim'
