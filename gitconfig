@@ -1,0 +1,51 @@
+[user]
+        name = Yike Lu
+[alias]
+        unstage = reset HEAD --
+        lga = log --oneline --decorate --all --graph
+        lg = log --oneline --decorate --all --graph -30                               # shows last 30 commits in a graph
+        dt = difftool -y
+        mt = mergetool
+        st = status -uno
+        br = branch -vv -a
+        pu = push --follow-tags
+        co = checkout
+        patch = commit --amend --reuse-message HEAD                                   # does a commit amend but keeps the previous message
+        amend = commit --amend
+        pf = push -f                                                                  # force-pushes amended commit to remote
+        going = !git add -A && git patch && git push -f                               # adds everything, amends to current commit and force-pushes to remote
+        remaster = !git co master && git pull && git co - && git rebase master        # updates the master branch and rebases on top of that
+[color]
+        ui = true
+        status = auto
+        branch = auto
+        interactive = true
+[core]
+        editor = vim
+[diff]
+        tool = meld
+        guitool = meld
+[merge]
+        tool = meld
+        guitool = meld
+[filter "lfs"]
+        clean = git-lfs clean -- %f
+        smudge = git-lfs smudge -- %f
+        process = git-lfs filter-process
+        required = true
+[pull]
+        rebase = true
+[branch]
+        autosetuprebase = always
+[http]
+        sslVerify = true
+[mergetool "meld"]
+        path = meld
+        keepBackup = false
+        trustExitCode = false
+[difftool "meld"]
+        path = meld
+        keepBackup = false
+        trustExitCode = false
+[push]
+        default = tracking
