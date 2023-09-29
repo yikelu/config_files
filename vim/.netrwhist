@@ -1,9 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/yikelu/.ipython/profile_default'
-let g:netrw_dirhist_2='/Users/yikelu/gitrepos/backtest'
-let g:netrw_dirhist_3='/Users/yikelu/gitrepos/backtest/ProjectPlanning'
-let g:netrw_dirhist_4='/Users/yikelu'
-let g:netrw_dirhist_5='/Users/yikelu/.vim/ftplugin/python/pyflakes'
-let g:netrw_dirhist_6='/Applications/NewEmacs/Contents/Resources/English.lproj'
-let g:netrw_dirhist_7='/Users/yikelu/.emacs.d/.git'
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/luyi/.vim'

@@ -20,9 +20,14 @@ Plug 'nvie/vim-flake8'
 
 Plug 'kien/ctrlp.vim'
 
-" Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plug 'vim-airline/vim-airline'
 
 Plug 'tomtom/tcomment_vim'
+
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
 call plug#end()
 
 set nu
@@ -32,16 +37,16 @@ let python_highlight_all=1
 syntax on
 
 set encoding=utf-8
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+" au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
-au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
-    \ set fileformat=unix
+au Filetype python set
+    \ tabstop=4
+    \ softtabstop=4
+    \ shiftwidth=4
+    \ textwidth=79
+    \ expandtab
+    \ autoindent
+    \ fileformat=unix
 
 "python with virtualenv support
 "py << EOF
@@ -54,3 +59,9 @@ au BufNewFile,BufRead *.py
 "EOF
 
 set bs=indent,eol,start
+
+set statusline=%f\ %h%w%m%r%=%-14.(%l,%c%V%)\ %P
+
+set laststatus=2
+
+let g:snipMate = { 'snippet_version' : 1 }
