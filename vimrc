@@ -6,13 +6,11 @@ nnoremap <space> za
 
 call plug#begin()
 Plug 'tmhedberg/SimpylFold'
-let g:SimpylFold_docstring_preview=1
 
 Plug 'vim-scripts/indentpython.vim'
 Plug 'vim-syntastic/syntastic'
-" Also add PEP 8 checking with this nifty little plugin:
 
-Plug 'nvie/vim-flake8'
+" Also add PEP 8 checking with this nifty little plugin:
 
 " Plug 'Valloric/YouCompleteMe'
 " let g:ycm_autoclose_preview_window_after_completion=1
@@ -35,18 +33,19 @@ filetype plugin indent on
 
 let python_highlight_all=1
 syntax on
+let g:SimpylFold_docstring_preview=1
 
 set encoding=utf-8
 " au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
-au Filetype python set
-    \ tabstop=4
-    \ softtabstop=4
-    \ shiftwidth=4
-    \ textwidth=79
-    \ expandtab
-    \ autoindent
-    \ fileformat=unix
+" au Filetype python set
+"     \ tabstop=4
+"     \ softtabstop=4
+"     \ shiftwidth=4
+"     \ textwidth=79
+"     \ expandtab
+"     \ autoindent
+"     \ fileformat=unix
 
 "python with virtualenv support
 "py << EOF
@@ -65,3 +64,7 @@ set statusline=%f\ %h%w%m%r%=%-14.(%l,%c%V%)\ %P
 set laststatus=2
 
 let g:snipMate = { 'snippet_version' : 1 }
+
+set wildmenu
+set wildmode=longest,full
+set wildoptions=pum
