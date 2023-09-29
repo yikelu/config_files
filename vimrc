@@ -7,7 +7,7 @@ nnoremap <space> za
 call plug#begin()
 Plug 'tmhedberg/SimpylFold'
 
-Plug 'vim-scripts/indentpython.vim'
+" Plug 'vim-scripts/indentpython.vim'
 Plug 'vim-syntastic/syntastic'
 
 " Also add PEP 8 checking with this nifty little plugin:
@@ -38,14 +38,14 @@ let g:SimpylFold_docstring_preview=1
 set encoding=utf-8
 " au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
-" au Filetype python set
-"     \ tabstop=4
-"     \ softtabstop=4
-"     \ shiftwidth=4
-"     \ textwidth=79
-"     \ expandtab
-"     \ autoindent
-"     \ fileformat=unix
+au Filetype python set
+    \ tabstop=4
+    \ softtabstop=4
+    \ shiftwidth=4
+    \ textwidth=79
+    \ expandtab
+    \ autoindent
+    \ fileformat=unix
 
 "python with virtualenv support
 "py << EOF
