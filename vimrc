@@ -1,6 +1,7 @@
 " Enable folding
 set foldmethod=indent
 set foldlevel=99
+set tabstop=4
 
 nnoremap <space> za
 
@@ -8,7 +9,8 @@ call plug#begin()
 Plug 'tmhedberg/SimpylFold'
 
 " Plug 'vim-scripts/indentpython.vim'
-Plug 'vim-syntastic/syntastic'
+" Plug 'vim-syntastic/syntastic'
+Plug 'dense-analysis/ale'
 
 " Also add PEP 8 checking with this nifty little plugin:
 
@@ -68,3 +70,9 @@ let g:snipMate = { 'snippet_version' : 1 }
 set wildmenu
 set wildmode=longest,full
 set wildoptions=pum
+
+let g:ale_linters={
+	\'python': ['pylint'],
+	\}
+
+set hlsearch
