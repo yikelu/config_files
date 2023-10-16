@@ -1,6 +1,6 @@
-PWD = `pwd`
+CWD=`pwd`
 cd ~/
-ln -s $PWD/vim .vim
-ln -s $PWD/vimrc .vimrc
-ln -s $PWD/tmux.conf .tmux.conf
-ln -s $PWD/pylintrc .pylintrc
+ln -s $CWD/vim .vim
+ln -s $CWD/vimrc .vimrc
+ln -s $CWD/tmux.conf .tmux.conf
+ln -s $CWD/pylintrc .pylintrc
